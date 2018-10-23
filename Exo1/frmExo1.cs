@@ -13,16 +13,13 @@ namespace Exo1
     public partial class FrmExo1 : Form
     {
         private String LeTexte;
-
         /// <summary>
         /// Constructeur
         /// </summary>
         public FrmExo1()
         {
-
             InitializeComponent();
             this.LeTexte = "Entrer le texte initial";
-
         }
 
         private void btnRecopier_Click(object sender, EventArgs e)

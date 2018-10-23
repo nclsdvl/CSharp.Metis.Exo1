@@ -52,10 +52,19 @@
     <Compile Include="frmExo1.Designer.cs">
       <DependentUpon>frmExo1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExo2a.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExo2a.Designer.cs">
+      <DependentUpon>frmExo2a.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmExo1.resx">
       <DependentUpon>frmExo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExo2a.resx">
+      <DependentUpon>frmExo2a.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
