@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Exo1.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +61,12 @@
     <Compile Include="frmExo2a.Designer.cs">
       <DependentUpon>frmExo2a.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExo2b.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExo2b.Designer.cs">
+      <DependentUpon>frmExo2b.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmExo1.resx">
@@ -65,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExo2a.resx">
       <DependentUpon>frmExo2a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExo2b.resx">
+      <DependentUpon>frmExo2b.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

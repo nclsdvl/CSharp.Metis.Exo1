@@ -35,6 +35,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.lblResultat = new System.Windows.Forms.Label();
             this.txtOriginal = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -102,6 +103,16 @@
             this.txtOriginal.TabIndex = 6;
             this.txtOriginal.Enter += new System.EventHandler(this.txtOriginal_Enter);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(35, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmExo1
             // 
             this.AcceptButton = this.btnRecopier;
@@ -109,6 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnEffacer;
             this.ClientSize = new System.Drawing.Size(781, 170);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtOriginal);
             this.Controls.Add(this.lblResultat);
             this.Controls.Add(this.btnQuitter);
@@ -134,6 +146,7 @@
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.Label lblResultat;
         private System.Windows.Forms.TextBox txtOriginal;
+        private System.Windows.Forms.Button button1;
     }
 }
 

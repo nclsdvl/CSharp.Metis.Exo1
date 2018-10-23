@@ -57,5 +57,12 @@ namespace Exo1
         {
             this.txtOriginal.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            frmExo2a x = new frmExo2a();
+            x.Show();
+        }
     }
 }
