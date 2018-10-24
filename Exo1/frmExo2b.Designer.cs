@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxPhrase1 = new System.Windows.Forms.TextBox();
+            this.tbxPhrase2 = new System.Windows.Forms.TextBox();
+            this.tbxPhrase3 = new System.Windows.Forms.TextBox();
             this.gbxPhrase = new System.Windows.Forms.GroupBox();
             this.cbxPhrase1 = new System.Windows.Forms.CheckBox();
             this.cbxPhrase2 = new System.Windows.Forms.CheckBox();
@@ -41,8 +41,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbxMonChar = new System.Windows.Forms.TextBox();
+            this.tbx_Resultat = new System.Windows.Forms.TextBox();
             this.btnRecherche = new System.Windows.Forms.Button();
             this.gbxPhrase.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,32 +75,32 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Phrase 3 :";
             // 
-            // textBox1
+            // tbxPhrase1
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbxPhrase1.Location = new System.Drawing.Point(91, 23);
+            this.tbxPhrase1.Name = "tbxPhrase1";
+            this.tbxPhrase1.Size = new System.Drawing.Size(377, 20);
+            this.tbxPhrase1.TabIndex = 3;
             // 
-            // textBox2
+            // tbxPhrase2
             // 
-            this.textBox2.Location = new System.Drawing.Point(91, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(377, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbxPhrase2.Location = new System.Drawing.Point(91, 58);
+            this.tbxPhrase2.Name = "tbxPhrase2";
+            this.tbxPhrase2.Size = new System.Drawing.Size(377, 20);
+            this.tbxPhrase2.TabIndex = 4;
             // 
-            // textBox3
+            // tbxPhrase3
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(377, 20);
-            this.textBox3.TabIndex = 5;
+            this.tbxPhrase3.Location = new System.Drawing.Point(91, 93);
+            this.tbxPhrase3.Name = "tbxPhrase3";
+            this.tbxPhrase3.Size = new System.Drawing.Size(377, 20);
+            this.tbxPhrase3.TabIndex = 5;
             // 
             // gbxPhrase
             // 
-            this.gbxPhrase.Controls.Add(this.textBox3);
-            this.gbxPhrase.Controls.Add(this.textBox2);
-            this.gbxPhrase.Controls.Add(this.textBox1);
+            this.gbxPhrase.Controls.Add(this.tbxPhrase3);
+            this.gbxPhrase.Controls.Add(this.tbxPhrase2);
+            this.gbxPhrase.Controls.Add(this.tbxPhrase1);
             this.gbxPhrase.Controls.Add(this.label3);
             this.gbxPhrase.Controls.Add(this.label2);
             this.gbxPhrase.Controls.Add(this.label1);
@@ -170,19 +170,20 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Nombres d\'occurences :";
             // 
-            // textBox4
+            // tbxMonChar
             // 
-            this.textBox4.Location = new System.Drawing.Point(353, 205);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(152, 20);
-            this.textBox4.TabIndex = 13;
+            this.tbxMonChar.Location = new System.Drawing.Point(353, 205);
+            this.tbxMonChar.Name = "tbxMonChar";
+            this.tbxMonChar.Size = new System.Drawing.Size(152, 20);
+            this.tbxMonChar.TabIndex = 13;
+            this.tbxMonChar.MaxLength = 1;
             // 
-            // textBox5
+            // tbx_Resultat
             // 
-            this.textBox5.Location = new System.Drawing.Point(353, 237);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(152, 20);
-            this.textBox5.TabIndex = 14;
+            this.tbx_Resultat.Location = new System.Drawing.Point(353, 237);
+            this.tbx_Resultat.Name = "tbx_Resultat";
+            this.tbx_Resultat.Size = new System.Drawing.Size(152, 20);
+            this.tbx_Resultat.TabIndex = 14;
             // 
             // btnRecherche
             // 
@@ -192,6 +193,7 @@
             this.btnRecherche.TabIndex = 15;
             this.btnRecherche.Text = "Lancer la recherche";
             this.btnRecherche.UseVisualStyleBackColor = true;
+            this.btnRecherche.Click += new System.EventHandler(this.btnRecherche_Click);
             // 
             // frmExo2b
             // 
@@ -199,8 +201,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 338);
             this.Controls.Add(this.btnRecherche);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbx_Resultat);
+            this.Controls.Add(this.tbxMonChar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
@@ -221,9 +223,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxPhrase1;
+        private System.Windows.Forms.TextBox tbxPhrase2;
+        private System.Windows.Forms.TextBox tbxPhrase3;
         private System.Windows.Forms.GroupBox gbxPhrase;
         private System.Windows.Forms.CheckBox cbxPhrase1;
         private System.Windows.Forms.CheckBox cbxPhrase2;
@@ -231,8 +233,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbxMonChar;
+        private System.Windows.Forms.TextBox tbx_Resultat;
         private System.Windows.Forms.Button btnRecherche;
     }
 }

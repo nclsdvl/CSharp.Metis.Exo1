@@ -60,9 +60,21 @@ namespace Exo1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            frmExo2a frmExo2a = new frmExo2a();
+            frmExo2a.Show();
 
-            frmExo2a x = new frmExo2a();
-            x.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmExo2b frmExo2b = new frmExo2b();
+            frmExo2b.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmExo3 frmExo3 = new frmExo3();
+            frmExo3.Show();
         }
     }
 }
