@@ -26,6 +26,43 @@ namespace Exo1
             this.Init();
         }
 
+        private void btnAjoute_Click(object sender, EventArgs e)
+        {
+            this.lstCible.Items.Add(this.cbxSource.SelectedItem);
+            this.cbxSource.Items.Remove(this.cbxSource.SelectedItem);
+        }
 
+        private void btnAjouteTout_Click(object sender, EventArgs e)
+        {
+            foreach (Object element in this.cbxSource.Items)
+            {
+                this.lstCible.Items.Add(element);
+            }
+            this.cbxSource.Items.Clear();
+
+        }
+
+        private void btnSupprime_Click(object sender, EventArgs e)
+        {
+            if (lstCible.SelectedItems == "")
+            {
+
+            }
+            else
+            {
+                this.cbxSource.Items.Add(this.lstCible.SelectedItem);
+                this.lstCible.Items.Remove(this.lstCible.SelectedItem);
+            }
+
+        }
+
+        private void btnSupprimeTout_Click(object sender, EventArgs e)
+        {
+            foreach (Object element in this.lstCible.Items)
+            {
+                this.lstCible.Items.Add(this.cbxSource.Items);
+            }
+            this.lstCible.Items.Clear();
+        }
     }
 }

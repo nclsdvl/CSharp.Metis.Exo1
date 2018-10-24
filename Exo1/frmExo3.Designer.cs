@@ -64,6 +64,7 @@
             this.btnAjoute.TabIndex = 2;
             this.btnAjoute.Text = ">";
             this.btnAjoute.UseVisualStyleBackColor = true;
+            this.btnAjoute.Click += new System.EventHandler(this.btnAjoute_Click);
             // 
             // btnAjouteTout
             // 
@@ -73,6 +74,7 @@
             this.btnAjouteTout.TabIndex = 3;
             this.btnAjouteTout.Text = ">>";
             this.btnAjouteTout.UseVisualStyleBackColor = true;
+            this.btnAjouteTout.Click += new System.EventHandler(this.btnAjouteTout_Click);
             // 
             // btnSupprime
             // 
@@ -82,6 +84,7 @@
             this.btnSupprime.TabIndex = 4;
             this.btnSupprime.Text = "<";
             this.btnSupprime.UseVisualStyleBackColor = true;
+            this.btnSupprime.Click += new System.EventHandler(this.btnSupprime_Click);
             // 
             // btnSupprimeTout
             // 
@@ -91,6 +94,7 @@
             this.btnSupprimeTout.TabIndex = 5;
             this.btnSupprimeTout.Text = "<<";
             this.btnSupprimeTout.UseVisualStyleBackColor = true;
+            this.btnSupprimeTout.Click += new System.EventHandler(this.btnSupprimeTout_Click);
             // 
             // btnHaut
             // 
@@ -127,7 +131,6 @@
             this.Controls.Add(this.cbxSource);
             this.Name = "frmExo3";
             this.Text = "frmExo3";
-
             this.ResumeLayout(false);
 
         }
