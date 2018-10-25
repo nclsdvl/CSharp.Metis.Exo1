@@ -76,5 +76,23 @@ namespace Exo1
             frmExo3 frmExo3 = new frmExo3();
             frmExo3.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Appli1 Appli1 = new Appli1();
+            Appli1.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Appli2 Appli2 = new Appli2();
+            Appli2.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmMDI frmMDI = new frmMDI();
+            frmMDI.Show();
+        }
     }
 }

@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appli1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appli1.Designer.cs">
+      <DependentUpon>Appli1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appli2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appli2.Designer.cs">
+      <DependentUpon>Appli2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChrono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChrono.Designer.cs">
+      <DependentUpon>frmChrono.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExo1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,8 +91,29 @@
     <Compile Include="frmExo3.Designer.cs">
       <DependentUpon>frmExo3.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDI.Designer.cs">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrinc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrinc.Designer.cs">
+      <DependentUpon>frmPrinc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Appli1.resx">
+      <DependentUpon>Appli1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appli2.resx">
+      <DependentUpon>Appli2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChrono.resx">
+      <DependentUpon>frmChrono.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmExo1.resx">
       <DependentUpon>frmExo1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExo3.resx">
       <DependentUpon>frmExo3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDI.resx">
+      <DependentUpon>frmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrinc.resx">
+      <DependentUpon>frmPrinc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

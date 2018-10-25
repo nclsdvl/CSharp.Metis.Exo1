@@ -60,8 +60,10 @@ namespace Exo1
             {
                 foreach (Object element in this.cbxSource.Items)
                 {
+                    this.cbxSource.Text = null;
                     this.lstCible.Items.Add(element);
                 }
+                
                 this.cbxSource.Items.Clear();
                 this.lstCible.Enabled = true;
                 this.cbxSource.Enabled = false;
@@ -129,6 +131,10 @@ namespace Exo1
             {
                 try
                 {
+                    Object monChoixAMonter = this.lstCible.SelectedItem;
+
+                    this.lstCible.Items[this.lstCible.SelectedIndex] = this.lstCible.Items[this.lstCible.SelectedIndex  -1];
+                    this.lstCible.Items[this.lstCible.SelectedIndex -1] = monChoixAMonter;
                     this.lstCible.SelectedIndex--;
                 }
                 catch (ArgumentOutOfRangeException)
@@ -144,8 +150,11 @@ namespace Exo1
             {
                 try
                 {
-                    this.lstCible.SelectedIndex++;
+                    Object monChoixAMonter = this.lstCible.SelectedItem;
 
+                    this.lstCible.Items[this.lstCible.SelectedIndex] = this.lstCible.Items[this.lstCible.SelectedIndex + 1];
+                    this.lstCible.Items[this.lstCible.SelectedIndex + 1] = monChoixAMonter;
+                    this.lstCible.SelectedIndex++;
                 }
                 catch (ArgumentOutOfRangeException)
                 {
