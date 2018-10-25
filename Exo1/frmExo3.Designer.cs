@@ -49,7 +49,7 @@
             // 
             // lstCible
             // 
-            this.lstCible.Cursor = System.Windows.Forms.Cursors.PanSW;
+            this.lstCible.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lstCible.FormattingEnabled = true;
             this.lstCible.Location = new System.Drawing.Point(370, 57);
             this.lstCible.Name = "lstCible";
@@ -105,6 +105,7 @@
             this.btnHaut.Size = new System.Drawing.Size(39, 35);
             this.btnHaut.TabIndex = 6;
             this.btnHaut.UseVisualStyleBackColor = true;
+            this.btnHaut.Click += new System.EventHandler(this.btnHaut_Click);
             // 
             // btnBas
             // 
@@ -115,6 +116,7 @@
             this.btnBas.Size = new System.Drawing.Size(39, 35);
             this.btnBas.TabIndex = 7;
             this.btnBas.UseVisualStyleBackColor = true;
+            this.btnBas.Click += new System.EventHandler(this.btnBas_Click);
             // 
             // frmExo3
             // 

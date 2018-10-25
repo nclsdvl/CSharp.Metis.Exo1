@@ -24,45 +24,134 @@ namespace Exo1
         {
             InitializeComponent();
             this.Init();
+            
         }
 
         private void btnAjoute_Click(object sender, EventArgs e)
         {
-            this.lstCible.Items.Add(this.cbxSource.SelectedItem);
-            this.cbxSource.Items.Remove(this.cbxSource.SelectedItem);
+           
+            
+            if (cbxSource.SelectedItem != null)
+            {
+                this.lstCible.Items.Add(this.cbxSource.SelectedItem);
+                this.cbxSource.Items.Remove(this.cbxSource.SelectedItem);
+                this.cbxSource.Text = null;
+                this.btnSupprime.Enabled = true;
+                this.btnSupprimeTout.Enabled = true;
+                this.lstCible.Enabled = true;
+                if (cbxSource.Items.Count == 0)
+                {
+                    this.cbxSource.Enabled = false;
+                    this.btnAjoute.Enabled = false;
+                    this.btnAjouteTout.Enabled = false;
+                }
+
+            }
+            if (cbxSource.Items.Count == 0)
+            {
+                this.btnAjoute.Enabled = false;
+                this.btnAjouteTout.Enabled = false;
+            }
         }
 
         private void btnAjouteTout_Click(object sender, EventArgs e)
         {
-            foreach (Object element in this.cbxSource.Items)
+            if (this.cbxSource.Items.Count != 0)
             {
-                this.lstCible.Items.Add(element);
+                foreach (Object element in this.cbxSource.Items)
+                {
+                    this.lstCible.Items.Add(element);
+                }
+                this.cbxSource.Items.Clear();
+                this.lstCible.Enabled = true;
+                this.cbxSource.Enabled = false;
+                this.btnAjoute.Enabled = false;
+                this.btnAjouteTout.Enabled = false;
+                this.btnSupprimeTout.Enabled = true;
+                this.btnSupprime.Enabled = true;
             }
-            this.cbxSource.Items.Clear();
+
 
         }
 
         private void btnSupprime_Click(object sender, EventArgs e)
         {
-            if (lstCible.SelectedItems == "")
+            if (lstCible.Items.Count == 0)
             {
-
+                this.btnSupprimeTout.Enabled = false;
+                this.btnSupprime.Enabled = false;
             }
-            else
+
+            if (this.lstCible.SelectedItem != null)
             {
+                this.cbxSource.Enabled = true;
                 this.cbxSource.Items.Add(this.lstCible.SelectedItem);
                 this.lstCible.Items.Remove(this.lstCible.SelectedItem);
+                this.btnAjoute.Enabled = true;
+                this.btnAjouteTout.Enabled = true;
+
+                if (lstCible.Items.Count == 0)
+                {
+                    this.lstCible.Enabled = false;
+                    this.btnSupprimeTout.Enabled = false;
+                    this.btnSupprime.Enabled = false;
+                }
             }
+            
 
         }
 
         private void btnSupprimeTout_Click(object sender, EventArgs e)
         {
-            foreach (Object element in this.lstCible.Items)
+
+            if (lstCible.Items.Count != 0)
             {
-                this.lstCible.Items.Add(this.cbxSource.Items);
+                this.cbxSource.Enabled = true;
+                foreach (Object elements in this.lstCible.Items)
+                {
+                    this.cbxSource.Items.Add(elements);
+                }
+                this.lstCible.Items.Clear();
+                
+                this.btnAjoute.Enabled = true;
+                this.btnAjouteTout.Enabled = true;
+
+                this.btnSupprime.Enabled = false;
+                this.btnSupprimeTout.Enabled = false;
             }
-            this.lstCible.Items.Clear();
+
+            this.lstCible.Enabled = false;
+        }
+
+        private void btnHaut_Click(object sender, EventArgs e)
+        {
+            if (this.lstCible.SelectedItem != null)
+            {
+                try
+                {
+                    this.lstCible.SelectedIndex--;
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+
+                }
+            }
+        }
+
+        private void btnBas_Click(object sender, EventArgs e)
+        {
+            if (this.lstCible.SelectedItem != null)
+            {
+                try
+                {
+                    this.lstCible.SelectedIndex++;
+
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+
+                }
+            }
         }
     }
 }
