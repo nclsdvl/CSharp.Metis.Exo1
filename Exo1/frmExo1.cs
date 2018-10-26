@@ -93,6 +93,8 @@ namespace Exo1
         {
             frmMDI frmMDI = new frmMDI();
             frmMDI.Show();
+
+
         }
     }
 }
