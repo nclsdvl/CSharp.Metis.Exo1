@@ -15,11 +15,17 @@ namespace Exo1
         public frmChrono()
         {
             InitializeComponent();
+            //this.tbChrono.Text = frmPrinc.count.ToString();
         }
 
         private void frmChrono_FormClosed(object sender, FormClosedEventArgs e)
         {
             ((frmMDI)this.MdiParent).frmChrono = null;
+        }
+
+        public void SetTimeStamp(int t)
+        {
+            this.tbChrono.Text = t.ToString();
         }
     }
 }

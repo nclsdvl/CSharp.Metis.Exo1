@@ -13,7 +13,9 @@ namespace Exo1
     public partial class frmPrinc : Form
     {
         Timer tim;
-        int count = 0;
+        public int count;
+        Random nbrAlea= new Random();
+
         public frmPrinc()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace Exo1
         }
 
 
-    private void InitializeTimer()
+    internal void InitializeTimer()
         {
             tim = new Timer();
             tim.Interval = 1000;
@@ -31,7 +33,7 @@ namespace Exo1
 
         }
 
-        private void RemplissageTB(object sender, EventArgs e)
+        internal void RemplissageTB(object sender, EventArgs e)
         {
             count++;
             tbChrono.Text = count.ToString();
@@ -42,9 +44,12 @@ namespace Exo1
 
         }
 
-        private void frmPrinc_Load(object sender, EventArgs e)
+        internal void frmPrinc_Load(object sender, EventArgs e)
         {
             InitializeTimer();
+            double monNBR = nbrAlea.NextDouble();
+            tbAleatoire.Text = monNBR.ToString(".##########");
+
         }
     }
 }

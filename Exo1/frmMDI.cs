@@ -14,6 +14,8 @@ namespace Exo1
     {
         private int childFormNumber = 0;
         public Form frmChrono;
+        frmPrinc frmPrinc;
+
 
         public frmMDI()
         {
@@ -32,7 +34,7 @@ namespace Exo1
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
-            frmPrinc frmPrinc;
+            
             frmPrinc = new frmPrinc();
             frmPrinc.MdiParent = this;
             frmPrinc.Show();
@@ -47,11 +49,13 @@ namespace Exo1
                 this.frmChrono = new frmChrono();
                 this.frmChrono.MdiParent = this;
                 this.frmChrono.Show();
+                ((frmChrono)this.frmChrono).SetTimeStamp(frmPrinc.count);
             }
             else
             {
                 this.frmChrono.Activate();
             }
+            
         }
 
     }
