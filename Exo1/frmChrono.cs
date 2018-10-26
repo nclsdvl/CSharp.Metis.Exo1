@@ -27,5 +27,16 @@ namespace Exo1
         {
             this.tbChrono.Text = t.ToString();
         }
+
+
+        private void btnActualiser_Click(object sender, EventArgs e)
+        {
+            this.tbChrono.Text = frmPrinc.count.ToString();
+        }
+
+        private void btnFermer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

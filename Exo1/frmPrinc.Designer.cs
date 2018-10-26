@@ -87,10 +87,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbChrono;
-        private System.Windows.Forms.TextBox tbAleatoire;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox tbChrono;
+        public System.Windows.Forms.TextBox tbAleatoire;
     }
 }

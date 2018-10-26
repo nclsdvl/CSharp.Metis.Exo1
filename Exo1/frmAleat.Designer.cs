@@ -1,6 +1,6 @@
 ﻿namespace Exo1
 {
-    partial class frmChrono
+    partial class frmAleat
     {
         /// <summary>
         /// Required designer variable.
@@ -28,70 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbChrono = new System.Windows.Forms.TextBox();
-            this.lbChrono = new System.Windows.Forms.Label();
+            this.lbNbr = new System.Windows.Forms.Label();
+            this.tbNbrA = new System.Windows.Forms.TextBox();
             this.btnActualiser = new System.Windows.Forms.Button();
             this.btnFermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tbChrono
+            // lbNbr
             // 
-            this.tbChrono.Enabled = false;
-            this.tbChrono.Location = new System.Drawing.Point(82, 47);
-            this.tbChrono.Name = "tbChrono";
-            this.tbChrono.Size = new System.Drawing.Size(100, 20);
-            this.tbChrono.TabIndex = 1;
+            this.lbNbr.AutoSize = true;
+            this.lbNbr.Location = new System.Drawing.Point(29, 62);
+            this.lbNbr.Name = "lbNbr";
+            this.lbNbr.Size = new System.Drawing.Size(94, 13);
+            this.lbNbr.TabIndex = 1;
+            this.lbNbr.Text = "Nombre Aléatoire :";
             // 
-            // lbChrono
+            // tbNbrA
             // 
-            this.lbChrono.AutoSize = true;
-            this.lbChrono.Location = new System.Drawing.Point(16, 50);
-            this.lbChrono.Name = "lbChrono";
-            this.lbChrono.Size = new System.Drawing.Size(47, 13);
-            this.lbChrono.TabIndex = 3;
-            this.lbChrono.Text = "Chrono :";
+            this.tbNbrA.Enabled = false;
+            this.tbNbrA.Location = new System.Drawing.Point(144, 59);
+            this.tbNbrA.Name = "tbNbrA";
+            this.tbNbrA.Size = new System.Drawing.Size(167, 20);
+            this.tbNbrA.TabIndex = 2;
             // 
             // btnActualiser
             // 
-            this.btnActualiser.Location = new System.Drawing.Point(245, 25);
+            this.btnActualiser.Location = new System.Drawing.Point(431, 30);
             this.btnActualiser.Name = "btnActualiser";
             this.btnActualiser.Size = new System.Drawing.Size(75, 23);
-            this.btnActualiser.TabIndex = 4;
+            this.btnActualiser.TabIndex = 3;
             this.btnActualiser.Text = "Actualiser";
             this.btnActualiser.UseVisualStyleBackColor = true;
             this.btnActualiser.Click += new System.EventHandler(this.btnActualiser_Click);
             // 
             // btnFermer
             // 
-            this.btnFermer.Location = new System.Drawing.Point(245, 65);
+            this.btnFermer.Location = new System.Drawing.Point(431, 86);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(75, 23);
-            this.btnFermer.TabIndex = 5;
+            this.btnFermer.TabIndex = 4;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
-            // frmChrono
+            // frmAleat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 109);
+            this.ClientSize = new System.Drawing.Size(546, 146);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnActualiser);
-            this.Controls.Add(this.lbChrono);
-            this.Controls.Add(this.tbChrono);
-            this.Name = "frmChrono";
-            this.Text = "frmChrono";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmChrono_FormClosed);
+            this.Controls.Add(this.tbNbrA);
+            this.Controls.Add(this.lbNbr);
+            this.Name = "frmAleat";
+            this.Text = "frmAleat";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAleat_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbChrono;
-        private System.Windows.Forms.Label lbChrono;
+
+        private System.Windows.Forms.Label lbNbr;
         private System.Windows.Forms.Button btnActualiser;
         private System.Windows.Forms.Button btnFermer;
+        public System.Windows.Forms.TextBox tbNbrA;
     }
 }

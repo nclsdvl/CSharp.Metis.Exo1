@@ -61,6 +61,12 @@
     <Compile Include="Appli2.Designer.cs">
       <DependentUpon>Appli2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAleat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAleat.Designer.cs">
+      <DependentUpon>frmAleat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChrono.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Appli2.resx">
       <DependentUpon>Appli2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAleat.resx">
+      <DependentUpon>frmAleat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChrono.resx">
       <DependentUpon>frmChrono.cs</DependentUpon>

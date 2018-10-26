@@ -15,7 +15,9 @@ namespace Exo1
 
         public Form frmChrono;
         frmPrinc frmPrinc;
-
+        public Form frmAleat;
+        public int A;
+        internal object tbAleatoire;
 
         public frmMDI()
         {
@@ -23,14 +25,7 @@ namespace Exo1
 
 
 
-            //this.frmChrono = new frmChrono();
-            //this.frmChrono.MdiParent = this;
-            //this.frmChrono.Show();
         }
-
-
-
-
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
@@ -38,6 +33,7 @@ namespace Exo1
             frmPrinc = new frmPrinc();
             frmPrinc.MdiParent = this;
             frmPrinc.Show();
+
         }
 
 
@@ -58,6 +54,20 @@ namespace Exo1
             
         }
 
+        private void nombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.frmAleat == null)
+            {
+                frmAleat = new frmAleat();
+                frmAleat.MdiParent = this;
+                frmAleat.Show();
+                ((frmAleat)this.frmAleat).SetAleat(frmPrinc.A);
+            }
+            else
+            {
+                this.frmAleat.Activate();
+            }
+        }
     }
         }
     
