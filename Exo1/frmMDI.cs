@@ -12,7 +12,7 @@ namespace Exo1
 {
     public partial class frmMDI : Form
     {
-        private int childFormNumber = 0;
+
         public Form frmChrono;
         frmPrinc frmPrinc;
 
