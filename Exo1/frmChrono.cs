@@ -12,6 +12,7 @@ namespace Exo1
 {
     public partial class frmChrono : Form
     {
+
         public frmChrono()
         {
             InitializeComponent();

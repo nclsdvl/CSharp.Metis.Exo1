@@ -90,14 +90,14 @@
             // chronoToolStripMenuItem
             // 
             this.chronoToolStripMenuItem.Name = "chronoToolStripMenuItem";
-            this.chronoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chronoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.chronoToolStripMenuItem.Text = "Chrono";
             this.chronoToolStripMenuItem.Click += new System.EventHandler(this.chronoToolStripMenuItem_Click);
             // 
             // nombreToolStripMenuItem
             // 
             this.nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
-            this.nombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombreToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.nombreToolStripMenuItem.Text = "Nombre";
             this.nombreToolStripMenuItem.Click += new System.EventHandler(this.nombreToolStripMenuItem_Click);
             // 
@@ -112,8 +112,9 @@
             // aProposDeToolStripMenuItem
             // 
             this.aProposDeToolStripMenuItem.Name = "aProposDeToolStripMenuItem";
-            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.aProposDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aProposDeToolStripMenuItem.Text = "A propos de";
+            this.aProposDeToolStripMenuItem.Click += new System.EventHandler(this.aProposDeToolStripMenuItem_Click);
             // 
             // frmMDI
             // 

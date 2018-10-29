@@ -17,7 +17,7 @@ namespace Exo1
         frmPrinc frmPrinc;
         public Form frmAleat;
         public int A;
-        internal object tbAleatoire;
+        //internal object tbAleatoire;
 
         public frmMDI()
         {
@@ -67,6 +67,14 @@ namespace Exo1
             {
                 this.frmAleat.Activate();
             }
+        }
+
+        private void aProposDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 aboutBox1 = new AboutBox1();
+            //aboutBox1.MdiParent = this;
+            
+            aboutBox1.ShowDialog();
         }
     }
         }
